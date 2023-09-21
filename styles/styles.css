@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#radius-value-1, #radius-value-2,  #weight-value {
+    width: 10%;
+}
+
+.slider-radius {
+    display: flex;
+    flex-direction: column;
+}
+
+.formula {
+    display: flex;
+    flex-direction: column;
+}
+
