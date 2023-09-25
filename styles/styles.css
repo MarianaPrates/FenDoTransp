@@ -2,15 +2,55 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
-#radius-value-1, #radius-value-2,  #weight-value {
+.buttons-step {
+    display: flex;
+    align-items: center;
+
+}
+
+.button-activated {
+    background-color: chartreuse;
+    color: black;
+    font-weight: bold;
+}
+
+.buttons>button {
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttons-step>button {
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#radius-value-1,
+#radius-value-2,
+#weight-value {
     width: 10%;
 }
 
@@ -22,5 +62,32 @@
 .formula {
     display: flex;
     flex-direction: column;
+
 }
 
+.formula>math {
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.left>div {
+    color: green;
+}
+
+.right>div {
+    color: red;
+}
+
+#canvas {
+    /* width: 400px; */
+    border: 1px solid;
+}
+
+#title {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}

@@ -9,34 +9,38 @@
 </head>
 
 <body>
+    <h2 id="title">Pascal's Principle in a Hydraulic Lift</h2>
 
     <div class="container">
         <div class="left">
             <div class="buttons">
-                <button>Start</button>
-                <button>Pause</button>
-                <button>Reset</button>
+                <button id="button-start">Start</button>
+                <button id="button-pause">Pause</button>
+                <button id="button-reset">Reset</button>
+                <div class="buttons-step">
+                    <button id="button-less-than"> |&lt; </button>
+                    <button id="button-greather-than"> &gt;| </button>
+                </div>
             </div>
+
 
             <div class="slider-radius">
                 <div class="radius-label">
                     <label for="radius-range-1">
                         Radius<sub>1</sub> (m)=
                     </label>
-                    <input type="text" value="0.1" disabled name="radius-value-1" id="radius-value-1">
+                    <input type="text" disabled name="radius-value-1" id="radius-value-1">
                 </div>
 
-                <input min="0.1" value="0" max="10" step="0.1" type="range" name="radius-range-1" id="radius-range-1">
+                <input min="0.1" max="10" step="0.1" type="range" name="radius-range-1" id="radius-range-1">
 
                 <div class="formula">
                     <math>
                         <mrow>
-                            <mi>
-                                <msub>
-                                    <mi>P</mi>
-                                    <mn>1</mn>
-                                </msub>
-                            </mi>
+                            <msub>
+                                <mi>P</mi>
+                                <mn>1</mn>
+                            </msub>
                         </mrow>
                         <mo>
                             =
@@ -44,20 +48,16 @@
 
                         <mfrac>
                             <mrow>
-                                <mi>
-                                    <msub>
-                                        <mi>F</mi>
-                                        <mn>1</mn>
-                                    </msub>
-                                </mi>
+                                <msub>
+                                    <mi>F</mi>
+                                    <mn>1</mn>
+                                </msub>
                             </mrow>
                             <mrow>
-                                <mi>
-                                    <msub>
-                                        <mi>A</mi>
-                                        <mn>1</mn>
-                                    </msub>
-                                </mi>
+                                <msub>
+                                    <mi>A</mi>
+                                    <mn>1</mn>
+                                </msub>
                             </mrow>
                         </mfrac>
 
@@ -71,7 +71,6 @@
                                     <msub>
                                         <mi id="radius-newton-numerator-1">F</mi>
                                         <ms>N</ms>
-
                                     </msub>
                                 </mi>
                             </mrow>
@@ -89,12 +88,10 @@
 
                     <math>
                         <mrow>
-                            <mi>
-                                <msub>
-                                    <mi>P</mi>
-                                    <mn>1</mn>
-                                </msub>
-                            </mi>
+                            <msub>
+                                <mi>P</mi>
+                                <mn>1</mn>
+                            </msub>
                         </mrow>
                         <mo>
                             =
@@ -110,8 +107,49 @@
         </div>
 
         <div class="center">
-            <h2>centro</h2>
-            <p>Animação</p>
+            <canvas id="canvas">
+                <h2>Navagador não suporta canvas</h2>
+            </canvas>
+
+            <div class="formula">
+                <math class="formula-center">
+                    <mrow>
+                        <msub>
+                            <mi>F</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>*</mo>
+                        <msub>
+                            <mi>d</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                            <mi>F</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>*</mo>
+                        <msub>
+                            <mi>d</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mrow>
+
+                </math>
+
+                <math class="formula-center">
+                    <mrow>
+                        <mi id="f1"></mi>
+                        <mo>*</mo>
+                        <mi id="d1"></mi>
+                        <mo>=</mo>
+                        <mi id="f2"></mi>
+                        <mo>*</mo>
+                        <mi id="d2"></mi>
+                    </mrow>
+
+                </math>
+            </div>
         </div>
 
         <div class="right">
@@ -119,10 +157,10 @@
                 <div class="radius-label">
                     <label for="weight-range"> Weight (N) =
                     </label>
-                    <input type="text" value="100" disabled name="weight-value" id="weight-value">
+                    <input type="text" disabled name="weight-value" id="weight-value">
                 </div>
 
-                <input min="100" value="100" max="20000" step="100" type="range" name="weight-range" id="weight-range">
+                <input min="100" max="20000" step="100" type="range" name="weight-range" id="weight-range">
 
             </div>
 
@@ -130,20 +168,18 @@
                 <div class="radius-label">
                     <label for="radius-range-2"> Radius <sub>2</sub> (m) =
                     </label>
-                    <input type="text" value="0.1" disabled name="radius-value-2" id="radius-value-2">
+                    <input type="text" disabled name="radius-value-2" id="radius-value-2">
                 </div>
 
-                <input min="0.1" value="0.1" max="10" step="0.1" type="range" name="radius-range-2" id="radius-range-2">
+                <input min="0.1" max="10" step="0.1" type="range" name="radius-range-2" id="radius-range-2">
 
                 <div class="formula">
                     <math>
                         <mrow>
-                            <mi>
-                                <msub>
-                                    <mi>P</mi>
-                                    <mn>2</mn>
-                                </msub>
-                            </mi>
+                            <msub>
+                                <mi>P</mi>
+                                <mn>2</mn>
+                            </msub>
                         </mrow>
                         <mo>
                             =
@@ -151,20 +187,16 @@
 
                         <mfrac>
                             <mrow>
-                                <mi>
-                                    <msub>
-                                        <mi>F</mi>
-                                        <mn>2</mn>
-                                    </msub>
-                                </mi>
+                                <msub>
+                                    <mi>F</mi>
+                                    <mn>2</mn>
+                                </msub>
                             </mrow>
                             <mrow>
-                                <mi>
-                                    <msub>
-                                        <mi>A</mi>
-                                        <mn>2</mn>
-                                    </msub>
-                                </mi>
+                                <msub>
+                                    <mi>A</mi>
+                                    <mn>2</mn>
+                                </msub>
                             </mrow>
                         </mfrac>
 
@@ -178,7 +210,6 @@
                                     <msub>
                                         <mi id="radius-newton-numerator-2">F</mi>
                                         <ms>N</ms>
-
                                     </msub>
                                 </mi>
                             </mrow>
@@ -196,12 +227,10 @@
 
                     <math>
                         <mrow>
-                            <mi>
-                                <msub>
-                                    <mi>P</mi>
-                                    <mn>2</mn>
-                                </msub>
-                            </mi>
+                            <msub>
+                                <mi>P</mi>
+                                <mn>2</mn>
+                            </msub>
                         </mrow>
                         <mo>
                             =
@@ -215,6 +244,7 @@
             </div>
 
         </div>
+
     </div>
 
     <script src="scripts/script.js"></script>
